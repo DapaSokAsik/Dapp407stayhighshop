@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Dapp407stayhigh Store</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Outfit',sans-serif;
+}
+
+body{
+background:#f4f4f4;
+padding-bottom:100px;
+}
+
+.header{
+background:white;
+padding:15px;
+display:flex;
+align-items:center;
+gap:10px;
+box-shadow:0 2px 10px rgba(0,0,0,.05);
+}
+
+.logo{
+width:40px;
+height:40px;
+overflow:hidden;
+border-radius:8px;
+}
+
+.logo img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.shop-name{
+font-weight:bold;
+}
+
+.container{
+padding:15px;
+}
+
+.title{
+font-family:'Montserrat',sans-serif;
+text-align:center;
+font-size:38px;
+margin:20px 0;
+}
+
+.search{
+width:100%;
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+margin-bottom:25px;
+}
+
+.products{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:12px;
+overflow:hidden;
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.content{
+padding:15px;
+}
+
+.product-name{
+font-family:'Outfit',cursive;
+font-size:18px;
+margin-bottom:10px;
+height:90px;
+overflow:hidden;
+line-height:1.4;
+}
+
+.price{
+color:#00D26A;
+font-size:24px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.sold{
+color:#666;
+font-size:14px;
+margin-bottom:15px;
+}
+
+.btn-group{
+display:flex;
+gap:10px;
+}
+
+.play-btn{
+flex:1;
+border:none;
+background:#ececec;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+}
+
+.buy-btn{
+flex:1;
+background:#222222;
+color:white;
+text-decoration:none;
+padding:10px;
+border-radius:8px;
+text-align:center;
+}
+
+.music-player{
+position:fixed;
+bottom:85px;
+left:50%;
+transform:translateX(-50%);
+width:350px;
+max-width:95%;
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+display:none;
+z-index:999;
+}
+
+.player-title{
+font-family:'Outfit',cursive;
+text-align:center;
+margin-bottom:15px;
+}
+
+.music-player audio{
+width:100%;
+}
+
+.close{
+margin-top:10px;
+width:100%;
+padding:10px;
+border:none;
+background:#ff4d4d;
+color:white;
+border-radius:8px;
+cursor:pointer;
+}
+
+.bottom-nav{
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-around;
+padding:12px;
+box-shadow:0 -3px 10px rgba(0,0,0,.1);
+}
+
+.nav-item{
+text-align:center;
+font-size:13px;
+color:#555;
+}
+
+.nav-icon{
+font-size:22px;
+margin-bottom:4px;
+}
+
+@media(max-width:600px){
+
+.products{
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
+
+.card img{
+height:150px;
+}
+
+.price{
+font-size:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+
+    <div class="logo">
+        <img src="images/dapa.png" alt="Produk">
+    </div>
+
+    <div class="shop-name">
+        Dapp407StayHigh
+    </div>
+
+</div>
+
+<div class="container">
+
+<h1 class="title">
+LIST FLM
+</h1>
+
+
+
+<div class="products" id="productContainer">
+
+<!-- PRODUK 1 -->
+<div class="card">
+
+<img src="images/dapa.png" alt="Produk">
+
+<div class="content">
+
+<div class="product-name">
+DJ NGANA SU PIGI STYLE THAILAND
+</div>
+
+<div class="price">
+Rp 50.000
+</div>
+
+
+<div class="btn-group">
+
+<button
+class="play-btn"
+data-audio="audio/nganasupigithai.mp3"
+data-title="DJ NGANA SU PIGI STYLE THAILAND">
+Play
+</button>
+
+<a
+class="buy-btn"
+href="https://wa.me/6285700707651?text=Hallo%20bang,%20order%20DJ%20NGANA%20SU%20PIGI%20THAILAND%20STYLE%20(50k),%20ready%20kah
+target="_blank">
+Beli
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- ORI HARDNAPP -->
+<div class="card">
+
+<img src="images/dapa.png" alt="Produk">
+
+<div class="content">
+
+<div class="product-name">
+DJ STYLE HARDNAPP ORIGINAL DFW
+</div>
+
+<div class="price">
+Rp 65.000
+</div>
+
+
+<div class="btn-group">
+
+<button
+class="play-btn"
+data-audio="audio/hardnapp.mp3"
+data-title="DJ STYLE HARDNAPP ORIGINAL DFW">
+Play
+</button>
+
+<a
+class="buy-btn"
+href="https://wa.me/6285700707651?text=Hallo%20bang,%20order%20DJ%20STYLE%20HARDNAPP%20ORIGINAL%20DFW%20(65k),%20ready%20kah?"
+target="_blank">
+Beli
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FUNK DI BRIKBIT -->
+<div class="card">
+
+<img src="images/dapa.png" alt="Produk">
+
+<div class="content">
+
+<div class="product-name">
+DJ FUNK DO BREAKBEAT
+</div>
+
+<div class="price">
+Rp 70.000
+</div>
+
+
+<div class="btn-group">
+
+<button
+class="play-btn"
+data-audio="audio/funkdobrikbit.mp3"
+data-title="DJ FUNK DO BRIKBIT">
+Play
+</button>
+
+<a
+class="buy-btn"
+href="https://wa.me/6285700707651?text=Hallo%20bang,%20order%20DJ%20FUNK%20DO%20ORIGINAL%20DO%BRIKBIT%20(70k),%20ready%20kah?"
+target="_blank">
+Beli
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- mojang -->
+<div class="card">
+
+<img src="images/dapa.png" alt="Produk">
+
+<div class="content">
+
+<div class="product-name">
+DJ Mojang v2
+</div>
+
+<div class="price">
+Rp 65.000
+</div>
+
+
+<div class="btn-group">
+
+<button
+class="play-btn"
+data-audio="audio/mojangv2.mp3"
+data-title="DJ MOJANG BOTTLEG V2">
+Play
+</button>
+
+<a
+class="buy-btn"
+href="https://wa.me/6285700707651?text=Hallo%20bang,%20order%20DJ%20MOJANG%20BOTTLEG%20V2%20(65k),%20ready%20kah?"
+target="_blank">
+Beli
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- bassdub artoriaspenca -->
+<div class="card">
+
+<img src="images/dapa.png" alt="Produk">
+
+<div class="content">
+
+<div class="product-name">
+BASSDUB STYLE ASTOR1ASPENCA
+</div>
+
+<div class="price">
+Rp 85.000
+</div>
+
+
+<div class="btn-group">
+
+<button
+class="play-btn"
+data-audio="audio/bassdub.mp3"
+data-title="BASSDUB STYLE ARTOR1ASPENCA">
+Play
+</button>
+
+<a
+class="buy-btn"
+href="https://wa.me/6285700707651?text=Hallo%20bang,%20order%20BASSDUB%20STYLE%20ARTOR1ASPENCA%20(85k),%20ready%20kah?"
+target="_blank">
+Beli
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PLAYER -->
+
+<div class="music-player" id="player">
+
+<div class="player-title" id="audioTitle">
+Preview Audio
+</div>
+
+<audio controls id="audioPlayer"></audio>
+
+<button class="close" id="closePlayer">
+Tutup Player
+</button>
+
+</div>
+
+<!-- NAVIGASI -->
+
+<script>
+
+const buttons=document.querySelectorAll('.play-btn');
+const player=document.getElementById('player');
+const audio=document.getElementById('audioPlayer');
+const title=document.getElementById('audioTitle');
+
+buttons.forEach(btn=>{
+
+btn.addEventListener('click',()=>{
+
+audio.src=btn.dataset.audio;
+
+title.innerText=btn.dataset.title;
+
+player.style.display='block';
+
+audio.play();
+
+});
+
+});
+
+document.getElementById('closePlayer')
+.addEventListener('click',()=>{
+
+audio.pause();
+
+player.style.display='none';
+
+});
+
+document.getElementById('search')
+.addEventListener('keyup',function(){
+
+let value=this.value.toLowerCase();
+
+document.querySelectorAll('.card')
+.forEach(card=>{
+
+let name=card.querySelector('.product-name')
+.innerText.toLowerCase();
+
+card.style.display=
+name.includes(value)
+?'block'
+:'none';
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
